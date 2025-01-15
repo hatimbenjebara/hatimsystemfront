@@ -1,0 +1,27 @@
+.footer {
+    width: 100%; /* 100% of the viewport width for responsiveness */
+    height: 4rem;
+    background-color: var(--background-color, #f8f9fa); /* Use fallback color if variable is not defined */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 0.9rem; /* Slightly larger for better readability */
+    font-family: var(--body-font, Arial, sans-serif); /* Fallback font */
+    color: var(--text-color, #6c757d); /* Fallback for text color */
+    border-top: 1px solid var(--border-color, #dee2e6); /* Optional border for separation */
+    position: fixed; /* Ensure footer sticks to the bottom */
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it’s above other elements */
+}
+.footer-link {
+    color: var(--link-color, #007bff); /* Use a primary color or fallback */
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color, #0056b3); /* Darker shade on hover */
+}

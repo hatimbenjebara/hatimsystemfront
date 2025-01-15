@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Container for Data Cards */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1%;
+}
+
+/* Data Cards */
+.dataCard {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--text-color);
+    margin: 2%;
+}
+
+/* Revenue Card */
+.revenueCard {
+    background-color: #f9fafb;
+    height: 300px;
+}
+
+/* Customer Card */
+.customerCard {
+    width: 45%;
+    background-color: #f1f9ff;
+}
+
+/* Category Card */
+.categoryCard {
+    width: 45%;
+    background-color: #fff6f6;
+}
+
+/* Chart Title */
+.chart-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Chart */
+.chart-container {
+    margin-top: 20px;
+}

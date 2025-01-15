@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.page {
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: 3rem; /* Adjust padding as needed */
+    margin: 0 auto;
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+/* Heading */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-top: 1rem; /* Added padding to avoid being under the navbar */
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--hover-color);
+    color: var(--activation-color);
+}
+
+.form-style{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    background-color: var( --table-color);
+    padding: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.form-in{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.form-in:nth-child(2n){
+    justify-content: end;
+}
+.add-em{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Form Labels */
+.form-in .form-label {
+    width: 95%;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: var(--text-color);
+}
+.form-in input, .form-in .form-select, .form-in .form-select option{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid var(--hover-color);
+    outline: none;
+    cursor : pointer;
+}
+.form-in .but{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3;
+    background-color: var(--activation-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+.form-in .but:hover{
+    background-color: var(--hover-color);
+    color: var(--background-color);
+}

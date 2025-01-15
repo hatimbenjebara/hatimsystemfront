@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.Home {
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: 3rem; /* Adjust padding as needed */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.totals-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center sections horizontally */
+    width: 100%;
+    max-width: 1000px;
+    background-color: var( --table-color);
+    padding: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+.totals-container .section {
+    padding: 20 px;
+    border: 1px solid var(--background-second-color);
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: var(--table-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Light shadow for sections */
+    transition: transform 0.3s ease; /* Hover effect */
+}
+.totals-container .section:hover {
+    transform: translateY(-5px); /* Lift up on hover */
+}
+.h4, .h5 {
+    margin: 0; /* Reset default margins */
+    margin-bottom: 0.5rem; /* Add margin for spacing */
+    text-align: center;
+    margin-bottom: 1px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 10px; /* Optional: Adjust spacing between the text */
+}
+/* Admin List */
+.admin-list {
+    margin-top: 20px;
+    background-color: var(--background-color);
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2%;
+    background-color: var(--background-color);
+}
+
+th, td {
+    border: 1px solid var(--background-second-color);
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: transparent;
+}
+
+/* Action Buttons */
+.btn-info, .btn-warning {
+    margin-right: 5px;
+}

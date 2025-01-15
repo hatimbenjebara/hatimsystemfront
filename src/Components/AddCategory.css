@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.con-addcat{
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: 3rem; /* Adjust padding as needed */
+    margin: 0 auto;
+    box-sizing: border-box; /* Ensure padding is included in height calculation */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-top: 1rem; /* Added padding to avoid being under the navbar */
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--hover-color);
+    color: var(--activation-color);
+    text-align: center;
+}
+.con-addcat-con{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    background-color: var( --table-color);
+    padding: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.form-in{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.form-cont{
+    text-align: center;
+}

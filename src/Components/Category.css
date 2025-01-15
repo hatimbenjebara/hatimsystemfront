@@ -1,0 +1,61 @@
+/* Global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent; /* A light background to help visualize the content */
+}
+
+/* Main container */
+.cat-pag {
+    max-width: 600px; /* Reduced width for better focus */
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto; /* Centered and adds some breathing room */
+    background-color: transparent; /* White background for contrast */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+/* Heading */
+h2 {
+    font-size: 1.5rem; /* Adjusted font size */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--hover-color); /* Subtle underline */
+    color: var(--activation-color);
+    text-align: center;
+}
+
+/* Button */
+.cat-pag .bt {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background-color: var(--activation-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cat-pag .bt:hover {
+    background-color: var(--hover-color);
+    color: var(--background-color);
+}

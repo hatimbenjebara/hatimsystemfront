@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: block; /* Use block layout instead of flex to avoid centering everything */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.employee_image {
+    width: 100px; /* Larger image for better visibility */
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensure the image is fully contained */
+}
