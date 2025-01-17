@@ -70,6 +70,7 @@ form {
     border: 2px solid var(--hover-color);
     outline: none;
     cursor : pointer;
+    background-color: transparent;
 }
 .form-in .form-image{
     padding: 5%;

@@ -1,5 +1,6 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*===== VARIABLES CSS =====*/
 :root {
     --header-height: 3rem;
@@ -7,7 +8,6 @@
     /*===== Colors =====*/
     /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
     /* HSL color mode */
-
     --hue-color: 0;
     --background-color: #01010f;
     --text-color:  #ddddd6;
@@ -22,7 +22,7 @@
     
       
     /*===== Font typography =====*/
-    --body-font: 'Poppins', sans-serif;
+    --body-font: "Josefin Sans", serif;
     --big-font-size: 2rem;
     --h2-font-size: 1.25rem;
     --normal-font-size: 0.938rem;
@@ -89,7 +89,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    background: transparent;
+    background: var(--background-color);
 }
 body{
     background: var(--background-color);

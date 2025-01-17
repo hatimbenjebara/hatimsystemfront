@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import './AddEmploy.css'
+import './EditEmployee.css'
 
 const EditEmployee = () =>{
     //take a name id of url

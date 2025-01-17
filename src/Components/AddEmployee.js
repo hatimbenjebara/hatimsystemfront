@@ -86,8 +86,13 @@ const AddEmployee = () => {
 			<form className="form-style" onSubmit={handleSubmit}>
                 <div className="form-in">
 					<label htmlFor="inputGroupFile01" className="form-label" >Select Image</label>
-					<input type="file" className="form-control" id="image" name="image"
+					<input type="file" className="form-image" id="image" name="image"
                     onChange={(e) => setEmployee({...employee, image: e.target.files[0]})}
+					/>
+				</div>
+                <div className="form-in">
+					<label htmlFor="employee_code" className="form-label">Employee Code</label>
+					<input type="text" className="form-control" id="employee_code" placeholder='Enter Employee code' autoComplete='off' onChange={(e) => setEmployee({...employee, employee_code: e.target.value})}
 					/>
 				</div>
 			    <div className="form-in">
@@ -98,11 +103,6 @@ const AddEmployee = () => {
                 <div className="form-in">
 					<label htmlFor="last_name" className="form-label">Last Name</label>
 					<input type="text" className="form-control" id="last_name" placeholder='Enter Last Name' autoComplete='off' onChange={(e) => setEmployee({...employee, last_name: e.target.value})}
-					/>
-				</div>
-                <div className="form-in">
-					<label htmlFor="employee_code" className="form-label">Employee Code</label>
-					<input type="text" className="form-control" id="employee_code" placeholder='Enter Employee code' autoComplete='off' onChange={(e) => setEmployee({...employee, employee_code: e.target.value})}
 					/>
 				</div>
                 <div className="form-in">
@@ -164,34 +164,7 @@ const AddEmployee = () => {
 					<input type="date" className="form-control" id="date_of_joining" autoComplete='off' onChange={(e) => setEmployee({...employee, date_of_joining: e.target.value})}
 					/>
 				</div>
-                <div className="form-in">
-                <label htmlFor="isStillWorking" className="form-label">
-                    Is the employee still working?
-                </label>
-                <input
-                    type="checkbox"
-                    id="isStillWorking"
-                    checked={employee.isStillWorking}
-                    onChange={handleToggleEmploymentStatus}
-                />
-            </div>
-
-            {!employee.isStillWorking && (
-                <div className="form-in">
-                    <label htmlFor="date_of_leaving" className="form-label">Date Of Leaving</label>
-                    <input
-                        type="date"
-                        className="form-control"
-                        id="date_of_leaving"
-                        placeholder="Enter Date of Leaving"
-                        autoComplete="off"
-                        value={employee.date_of_leaving}
-                        onChange={(e) =>
-                            setEmployee({ ...employee, date_of_leaving: e.target.value || 'N/A' })
-                        }
-                    />
-                </div>
-            )}
+                
                 <div className="form-in">
 					<label htmlFor="hour_of_work" className="form-label">Number of Hour of Work</label>
 					<input type="number" className="form-control" id="hour_of_work" placeholder='40' autoComplete='off' onChange={(e) => setEmployee({...employee, hour_of_work: e.target.value})}
@@ -210,6 +183,34 @@ const AddEmployee = () => {
                         ))}
                     </select>
 				</div>
+                <div className="form-in">
+                    <label htmlFor="isStillWorking" className="form-label">
+                        Is the employee still working?
+                    </label>
+                    <input
+                        type="checkbox"
+                        id="isStillWorking"
+                        checked={employee.isStillWorking}
+                        onChange={handleToggleEmploymentStatus}
+                    />
+                </div>
+
+                {!employee.isStillWorking && (
+                    <div className="form-in">
+                        <label htmlFor="date_of_leaving" className="form-label">Date Of Leaving</label>
+                        <input
+                            type="date"
+                            className="form-control"
+                            id="date_of_leaving"
+                            placeholder="Enter Date of Leaving"
+                            autoComplete="off"
+                            value={employee.date_of_leaving}
+                            onChange={(e) =>
+                                setEmployee({ ...employee, date_of_leaving: e.target.value || 'N/A' })
+                            }
+                        />
+                    </div>
+                )}
 
 				<div className="form-in">
 					<button type="submit" className="but">Create</button>

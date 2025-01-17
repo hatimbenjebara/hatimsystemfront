@@ -1,86 +1,148 @@
-*{
+/* General Reset */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-.Home {
-    max-width: 1200px;
     min-height: 100vh;
-    padding: 3rem; /* Adjust padding as needed */
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    scroll-behavior: smooth; /* Redundant but ensures smooth scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+/* Home Container */
+.Home {
+    min-height: 100vh;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Depth effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.Home:hover {
+    transform: scale(1.02); /* Subtle scaling on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Totals Container */
 .totals-container {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Center sections horizontally */
+    align-items: center;
+    text-align: center;
     width: 100%;
     max-width: 1000px;
-    background-color: var( --table-color);
-    padding: 2rem 0;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.8), 0 8px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
 }
+
+/* Totals Section */
 .totals-container .section {
-    padding: 20 px;
-    border: 1px solid var(--background-second-color);
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
-    display: flex;
-    flex-wrap: wrap;
-    width: 30%;
-    border-radius: 8px;
-    padding-bottom: 15px;
-    text-align: center;
-    background-color: var(--table-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Light shadow for sections */
-    transition: transform 0.3s ease; /* Hover effect */
+    padding: 20px;
+    border: 1px solid #d4d4d8;
+    border-radius: 12px;
+    flex: 1; /* Equal width sections */
+    margin: 0 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .totals-container .section:hover {
-    transform: translateY(-5px); /* Lift up on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+/* Typography */
 .h4, .h5 {
-    margin: 0; /* Reset default margins */
-    margin-bottom: 0.5rem; /* Add margin for spacing */
-    text-align: center;
-    margin-bottom: 1px;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    text-align: center;
-    margin-left: 10px; /* Optional: Adjust spacing between the text */
+    margin: 0 0 10px 0;
+    color: #4f46e5; /* Vibrant accent color */
 }
+
 /* Admin List */
 .admin-list {
     margin-top: 20px;
-    background-color: var(--background-color);
-}
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 2%;
-    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
-    border: 1px solid var(--background-second-color);
-    padding: 8px;
-    text-align: center;
-}
-th {
+/* Table */
+.table-admin{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 3px solid #e2e8f0;
+    overflow: hidden;
     background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.table-admin thead th, .table-admin td {
+    border: 1px solid #e2e8f0;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+    transform: all 0.3s ease;
+}
+.table-admin thead th:hover, .table-admin td:hover {
+    background-color: goldenrod;
+    color: black;
+}
+.table-admin th {
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Action Buttons */
 .btn-info, .btn-warning {
     margin-right: 5px;
+    padding: 8px 12px;
+    padding-left: 3px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-info {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+.btn-info:hover {
+    background-color: #1e40af;
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background-color: #f59e0b;
+    color: #ffffff;
+}
+.btn-warning:hover {
+    background-color: #d97706;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .totals-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .totals-container .section {
+        width: 100%;
+        margin: 10px 0;
+    }
 }

@@ -29,44 +29,38 @@ function Dashboard({ sidebar }) {
 
     return (
         <div className="container-fluid">   
-            <div className="">
-                <div className="">
-                    <div className=''>
-                    <nav className="flex-div">
-                    <div className={`nav-left  ${sidebar ? "" : "small-sidebar"}`}>
+                    <nav className={`nav-left  ${sidebar ? "" : "small-sidebar"}`}>
                          <div className="side-link">
                                     <Link to="/dashboard" className="nav-link">
-                                        <span className="ms-1 d-none d-sm-inline">Resume</span> 
+                                        <span className="link-text">Resume</span> 
                                     </Link>
                                 </div>
                                 <div className="side-link">
                                     <Link to="/dashboard/employee" className="nav-link">
-                                        <span className="ms-1 d-none d-sm-inline">Employees</span> 
+                                        <span className="link-text">Employees</span> 
                                     </Link>
                                 </div>   
                                 <div className="side-link">
                                     <Link to="/dashboard/category" className="nav-link">
-                                        <span className="ms-1 d-none d-sm-inline">Category</span> 
+                                        <span className="link-text">Category</span> 
                                     </Link>
                                 </div>
                                 <div className="side-link">
                                     <Link to="/dashboard/profile" className="nav-link">
-                                        <span className="ms-1 d-none d-sm-inline">Activite</span>
+                                        <span className="link-text">Activite</span>
                                     </Link>
                                 </div>
                                 <div className="side-link" onClick={handleLogout}>
-                                    <a href="#" className="nav-link">
-                                        <span className="ms-1 d-none d-sm-inline">Logout</span>
-                                    </a>
+                                    <button className="nav-link logout-btn" onClick={handleLogout}>
+                                        <span className="link-text">Logout</span>
+                                    </button>
                                 </div>
-                    </div>
+
                 </nav>                        					
-                    </div>
-                    <div className="p-4">
+                    <div className="page-content">
                         <Outlet />
                     </div>
-                </div>
-            </div>
+
         </div>
     )
 }

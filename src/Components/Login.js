@@ -57,7 +57,7 @@ const Login = () =>{
                         <label htmlFor='password'>Password: </label>
                         <input type='password' name='password' placeholder='test password: 1234' className='form-control rounded-0' onChange={(e) => setValues({...values, password: e.target.value})}/>
                     </div>
-                    <button className='btn btn-success w-100 rounded-0'>Submit</button>
+                    <button className='btn-3'>Submit</button>
                 </form>
                 <div>
                     <input type='checkbox' name='tick' id='tick' />

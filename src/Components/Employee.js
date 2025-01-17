@@ -41,15 +41,19 @@ const Employee = () => {
     }
     
     return (
-        <div className="px-5">
+        <div className="page-5">
             <div className="title">
                 <h3>
                     Employee List
                 </h3>
             </div>
-            <Link to="/dashboard/add_employee" className="btn btn-success d-flex justify-content-center ">Add Employee</Link>
+            <div className="button-container">
+                <Link to="/dashboard/add_employee" className="btn-success">
+                    Add Employee
+                </Link>
+            </div>
             <div className="table-responsive ">
-                <table className="table">
+                <table className="table-em">
                     <thead className="table-dark">
                         <tr>
                             <th>Image</th>
@@ -97,8 +101,8 @@ const Employee = () => {
                                 <td>{e.rest_days} </td>
                                 <td>{e.salary}</td>
                                 <td>
-                                    <Link to={`/dashboard/edit_employee/`+e.id} className="btn btn-info btn-sm me-2">Edit</Link>
-                                    <button className="btn btn-warning btn-sm" onClick={() => handleDelete(e.id)}>Delete</button>
+                                    <Link to={`/dashboard/edit_employee/`+e.id} className="btn-info">Edit</Link>
+                                    <button className="btn-warning" onClick={() => handleDelete(e.id)}>Delete</button>
                                 </td>
                             </tr>
                         ))}

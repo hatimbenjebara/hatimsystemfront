@@ -19,10 +19,18 @@ body{
 }
 
 .loginForm {
-    padding: 20px;
-    border: 3px solid var(--background-second-color);
-    border-radius: 5px;
-    width: 400px;
+    padding: 30px; /* Extra padding for a more spacious look */
+    border: 3px solid var(--background-second-color, #ccc);
+    border-radius: 10px; /* Softer corners */
+    width: 100%;
+    max-width: 400px; /* Ensure responsiveness */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.loginForm:hover {
+    transform: scale(1.02); /* Subtle scaling effect on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .loginForm h2 {
@@ -35,7 +43,14 @@ body{
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    background-color: transparent;
     border: 1px solid var(--background-second-color);
+    text-align: center;
+    transition: background-color color 0.3s;
+}
+.loginForm input:focus {
+    background-color: rgba(251, 255, 0, 0.815);
+    color: black;
 }
 
 .loginForm button {
@@ -43,14 +58,18 @@ body{
     padding: 10px;
     margin-top: 10px;
     border: none;
+    font-weight: bold;
+    font-size: large;
     border-radius: 5px;
     background-color: var(--btns-1-color);
     color: var(--text-color);
     cursor: pointer;
+    transition: background-color color 0.3s;
 }
 
 .loginForm button:hover {
-    background-color: var(--btns-1-color);
+    background-color: rgba(251, 255, 0, 0.815);
+    color: black;
 }
 
 .checkbox-container {

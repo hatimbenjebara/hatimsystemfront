@@ -4,58 +4,105 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: transparent; /* A light background to help visualize the content */
+    min-height: 100vh; /* Ensures the page covers the viewport */
+    background-color: transparent; /* Subtle background for better visualization */
+    font-family: Arial, sans-serif; /* A simple, readable font */
 }
 
 /* Main container */
 .cat-pag {
-    max-width: 600px; /* Reduced width for better focus */
+    max-width: 800px; /* Restricts max width for better readability */
     width: 100%;
-    padding: 20px;
-    margin: 20px auto; /* Centered and adds some breathing room */
-    background-color: transparent; /* White background for contrast */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    border-radius: 10px;
+    padding: 5px; /* Adds spacing inside the container */
+    margin: 20px auto; /* Centers the container */
+    background-color: transparent; /* Solid background for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 10px; /* Smooth corners */
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: auto;
+    overflow: hidden; /* Prevents scrollbars inside the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cat-pag:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
 }
 
 /* Heading */
-h2 {
-    font-size: 1.5rem; /* Adjusted font size */
+.con h2 {
+    font-size: 1.8rem; /* Slightly larger font size */
     font-weight: bold;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--hover-color); /* Subtle underline */
-    color: var(--activation-color);
+    border-bottom: 3px solid var(--hover-color, #007bff); /* Clearer underline */
+    color: var(--activation-color, #007bff); /* Fallback color */
     text-align: center;
+    margin-bottom: 20px; /* Spacing below the heading */
 }
 
 /* Button */
 .cat-pag .bt {
     width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    background-color: var(--activation-color);
-    color: var(--text-color);
+    padding: 10px; /* Improved button size */
+    margin: 10px 0 20px; /* Spacing around the button */
+    background-color: var(--activation-color, #007bff);
+    color: #fff; /* Text color for better contrast */
+    font-size: 1rem;
     font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
-
 .cat-pag .bt:hover {
-    background-color: var(--hover-color);
-    color: var(--background-color);
+    background-color: goldenrod;
+    color: #fff; /* Ensures consistent text contrast */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+thead {
+    background-color: transparent; /* Header background */
+    color: #fff; /* Header text color */
+}
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+tbody tr {
+    background-color: transparent; /* Default row background */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+tbody tr:nth-child(even) {
+    background-color: gray; /* Alternate row background */
+}
+tbody tr:hover {
+    background-color: goldenrod; /* Highlighted row */
+    color: #fff; /* Highlighted text color */
+}
+tbody td {
+    padding: 10px;
+    text-align: left;
+}
+thead th, tbody td {
+    border: 1px solid #fff; /* Border color */
+}
+thead th:hover{
+    background-color: greenyellow; /* Hover effect */
+    color: #fff; /* Hover text color */
+} 
+tbody td:hover {
+    background-color: goldenrod; /* Hover effect */
+    color: #fff; /* Hover text color */
 }

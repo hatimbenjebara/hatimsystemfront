@@ -7,21 +7,20 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background: var(--background-color);
   color: var(--text-color);
+  font-family: "Josefin Sans", serif;
 }
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 .subcontainer {
   text-align: center;
 }
 .subtitle{
-  padding: 10%;
+  padding: 5%;
   border-bottom: 3px solid var(--activation-color);
   margin: 3%;
 } 

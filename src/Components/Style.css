@@ -4,17 +4,74 @@
     box-sizing: border-box;
 }
 body{
-    display: block; /* Use block layout instead of flex to avoid centering everything */
+    display: block;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: transparent;
+    font-family: "Josefin Sans", serif;
 }
-.employee_image {
-    width: 100px; /* Larger image for better visibility */
-    height: 100px;
-    border-radius: 50%;
+.employee-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.employee-header h4 {
+    font-size: 1.8rem;
     margin-bottom: 20px;
-    object-fit: cover; /* Ensure the image is fully contained */
+}
+.employee-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.employee-details h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.employee-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.employee-category button {
+    background-color: goldenrod; /* Warning color */
+    color: #000;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 80%;
+    height: 30px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.employee-category button:hover {
+    background-color: greenyellow;
+    transform: translateY(-5px); /* Slight zoom effect on hover */
+}
+.employee-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}  
+.employee-details-table td {
+    padding: 8px 12px;
+    border: none;
+}  
+.employee-details-table td:first-child {
+    font-weight: bold;
+    text-align: right;
 }

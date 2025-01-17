@@ -85,7 +85,7 @@ const Home = () => {
         </div>
         <div className="admin-list">
             <h3>List of Admins</h3>
-            <table className="table">
+            <table className="table-admin">
                 <thead>
                     <tr>
                         <th>Email</th>
@@ -97,8 +97,8 @@ const Home = () => {
                         <tr key={a.id}>
                             <td>{a.email}</td>
                             <td>
-                                <Link to={`/dashboard/edit_employee/${a.id}`} className="btn btn-info btn-sm">Edit</Link>
-                                <button className="btn btn-warning btn-sm" onClick={() => handleDelete(a.id)}>Delete</button>
+                                <Link to={`/dashboard/edit_employee/${a.id}`} className="btn-info">Edit</Link>
+                                <button className="btn-warning " onClick={() => handleDelete(a.id)}>Delete</button>
                             </td>
                         </tr>
                     ))}
